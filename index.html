@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบจำลองเครือข่ายเตือนภัยพิบัติ (BCI Disaster Network)</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Kanit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container" id="app-container">
+
+        <!-- ขอบจอเตือนภัยกะพริบเวลาเกิดสึนามิ -->
+        <div class="danger-overlay" id="danger-overlay"></div>
+
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo">
+                <i class="fa-solid fa-brain"></i>
+                <h1>เครือข่ายแจ้งเตือนภัยจิตสำนึก (Internet of Brains)</h1>
+            </div>
+            <div class="system-status">
+                <span class="status-indicator online" id="status-indicator"></span>
+                <span id="status-text">ระบบทำงานปกติ</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard">
+
+            <!-- Left Panel: Control Center -->
+            <section class="panel control-panel">
+                <div class="panel-header">
+                    <i class="fa-solid fa-sliders"></i>
+                    <h2>ศูนย์ควบคุมสถานการณ์</h2>
+                </div>
+
+                <div class="control-group">
+                    <h3>จำลองการเกิดภัยพิบัติ</h3>
+                    <p class="desc">กดปุ่มเพื่อจำลองคลื่นสึนามิ และสังเกตการลัดคิวข้อมูล</p>
+                    <button id="btn-normal" class="btn btn-normal active">
+                        <i class="fa-solid fa-water"></i> ทะเลสงบ (Normal)
+                    </button>
+                    <button id="btn-tsunami" class="btn btn-danger">
+                        <i class="fa-solid fa-house-tsunami"></i> ปล่อยคลื่นสึนามิ! (Danger)
+                    </button>
+                </div>
+
+                <div class="control-group">
+                    <h3>ทดสอบโครงสร้างเครือข่าย</h3>
+                    <p class="desc">จำลองการที่เสาสัญญาณพัง เพื่อดูระบบซ่อมแซมเส้นทางอัตโนมัติ (Mycelium Self-Healing)
+                    </p>
+                    <button id="btn-destroy" class="btn btn-warning">
+                        <i class="fa-solid fa-bomb"></i> ทำลายเสาสัญญาณหลัก
+                    </button>
+                    <button id="btn-repair" class="btn btn-outline" disabled>
+                        <i class="fa-solid fa-tools"></i> ซ่อมแซมเสาสัญญาณ
+                    </button>
+                </div>
+            </section>
+
+            <!-- Center Panel: Network Map -->
+            <section class="panel map-panel" id="map-panel">
+                <div class="panel-header">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h2>แผนภาพเครือข่ายจำลอง (Visual Network Map)</h2>
+                </div>
+
+                <div class="network-container">
+
+                    <!-- เอฟเฟกต์คลื่นน้ำใต้ Sensor -->
+                    <div class="ocean-container" id="ocean">
+                        <div class="wave wave1"></div>
+                        <div class="wave wave2"></div>
+                        <div class="wave wave3"></div>
+                    </div>
+
+                    <!-- Layer 1: Sensor -->
+                    <div class="node-column sensor-layer">
+                        <div class="layer-title">Layer 1: เซนเซอร์จับคลื่นวิกฤต</div>
+                        <div class="node main-node" id="node-sensor">
+                            <i class="fa-solid fa-satellite-dish"></i>
+                            <span>เซนเซอร์ทุ่นทะเล</span>
+                        </div>
+                    </div>
+
+                    <!-- Layer 2: Edge -->
+                    <div class="node-column edge-layer">
+                        <div class="layer-title">Layer 2: Mycelium Edge AI</div>
+                        <div class="node mini-node" id="node-edge-1">เสารอง A</div>
+                        <div class="node main-node" id="node-edge-2">
+                            <i class="fa-solid fa-server"></i>
+                            <span>เสาหลัก (M1)</span>
+                        </div>
+                        <div class="node mini-node" id="node-edge-3">เสารอง B</div>
+                    </div>
+
+                    <!-- Layer 3: Backbone -->
+                    <div class="node-column quantum-layer">
+                        <div class="layer-title">Layer 3: โครงข่ายควอนตัม</div>
+                        <div class="node main-node shape-hexagon" id="node-backbone">
+                            <i class="fa-solid fa-atom"></i>
+                            <span>คอร์ส่งข้ามทวีป</span>
+                        </div>
+                    </div>
+
+                    <!-- Layer 4: Brain -->
+                    <div class="node-column brain-layer">
+                        <div class="layer-title">Layer 4: ระบบประสาทผู้รับ</div>
+                        <div class="node main-node" id="node-brain">
+                            <i class="fa-solid fa-head-side-pulse"></i>
+                            <span>สมองมนุษย์</span>
+                        </div>
+                        <div id="brain-print-auth" class="auth-badge hidden">
+                            <i class="fa-solid fa-fingerprint"></i> ตรวจสอบ Brain-print สำเร็จ
+                        </div>
+                    </div>
+
+                    <!-- Visualization Canvas for Packets -->
+                    <canvas id="packetCanvas"></canvas>
+                </div>
+            </section>
+
+            <!-- Right Panel: Metrics -->
+            <section class="panel metrics-panel">
+                <div class="panel-header">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h2>สถิติแบบเรียลไทม์</h2>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-title">ความหน่วงเวลา (Latency)</div>
+                    <div class="metric-value">
+                        <span id="latency-val">0.000</span> <span class="unit">วินาที</span>
+                    </div>
+                    <div class="metric-target">เป้าหมายโปรโตคอล: < 0.500 วินาที</div>
+                    </div>
+
+                    <div class="metric-card queue-card">
+                        <div class="metric-title">คิวจัดลำดับความสำคัญ (QoS)</div>
+                        <div class="queue-container" id="qos-queue">
+                            <!-- Queue items will be generated here -->
+                            <div class="empty-queue-msg">คิวว่าง</div>
+                        </div>
+                    </div>
+
+                    <div class="log-container">
+                        <div class="log-header">ระบบบันทึกเหตุการณ์ (Logs)</div>
+                        <div class="log-body" id="system-logs">
+                            <div class="log-entry">เริ่มต้นระบบจำลองเครือข่าย...</div>
+                            <div class="log-entry">กำลังเชื่อมต่อกับโครงข่าย Quantum Backbone...</div>
+                        </div>
+                    </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
