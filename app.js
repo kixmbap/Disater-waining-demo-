@@ -280,6 +280,7 @@ btnNormal.addEventListener('click', () => {
     dangerOverlay.classList.remove('active');
     oceanContainer.className = 'live-cam'; // Reset all extra classes
     nodeSensor.classList.remove('danger');
+    nodeSensor.innerHTML = '<i class="fa-solid fa-satellite-dish"></i><span>เซนเซอร์เรดาร์รวม</span>';
     statusIndicator.parentElement.classList.remove('danger');
     statusText.textContent = "ระบบทำงานปกติ";
 
@@ -305,6 +306,21 @@ function triggerDisaster(type, titleInfo, statusMsg) {
     dangerOverlay.classList.add('active');
     oceanContainer.className = `live-cam ${type}`;
     nodeSensor.classList.add('danger');
+
+    let sensorIcon = 'fa-satellite-dish';
+    let sensorName = 'เซนเซอร์เรดาร์รวม';
+    if (type === 'tsunami') {
+        sensorIcon = 'fa-water';
+        sensorName = 'เซนเซอร์ทุ่นทะเล';
+    } else if (type === 'earthquake') {
+        sensorIcon = 'fa-wave-square';
+        sensorName = 'เซนเซอร์แผ่นดินไหว';
+    } else if (type === 'fire') {
+        sensorIcon = 'fa-temperature-high';
+        sensorName = 'เซนเซอร์ความร้อน';
+    }
+    nodeSensor.innerHTML = `<i class="fa-solid ${sensorIcon}"></i><span>${sensorName}</span>`;
+
     statusIndicator.parentElement.classList.add('danger');
     statusText.textContent = statusMsg;
 
