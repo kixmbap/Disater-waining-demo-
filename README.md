@@ -49,3 +49,6 @@ Since the application was entirely rewritten to be client-side only (Vanilla JS)
 * **FontAwesome 6**: Extensive library for the minimal, highly-contextual UI icons.
 * **Google Fonts**: `Kanit` & `Orbitron` to give it a clean, readable, yet slightly futuristic feel.
 
+<p align="center">
+<img src="imgdemo/demo.png" width="700">
+</p>
