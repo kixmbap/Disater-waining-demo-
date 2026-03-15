@@ -42,13 +42,25 @@
 
                 <div class="control-group">
                     <h3>จำลองการเกิดภัยพิบัติ</h3>
-                    <p class="desc">กดปุ่มเพื่อจำลองคลื่นสึนามิ และสังเกตการลัดคิวข้อมูล</p>
+                    <p class="desc">กดปุ่มเพื่อจำลองภัยพิบัติรูปแบบต่างๆ และสังเกตการลัดคิวข้อมูล</p>
                     <button id="btn-normal" class="btn btn-normal active">
-                        <i class="fa-solid fa-water"></i> ทะเลสงบ (Normal)
+                        <i class="fa-solid fa-cloud-sun"></i> สภาวะปกติ (Normal)
                     </button>
-                    <button id="btn-tsunami" class="btn btn-danger">
-                        <i class="fa-solid fa-house-tsunami"></i> ปล่อยคลื่นสึนามิ! (Danger)
-                    </button>
+                    <div class="disaster-buttons"
+                        style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; margin-bottom: 0.75rem;">
+                        <button id="btn-tsunami" class="btn btn-danger btn-sm"
+                            style="margin-bottom: 0; padding: 0.5rem; font-size: 0.85rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.25rem;">
+                            <i class="fa-solid fa-water" style="font-size: 1.5rem;"></i>สึนามิ
+                        </button>
+                        <button id="btn-earthquake" class="btn btn-danger btn-sm"
+                            style="margin-bottom: 0; padding: 0.5rem; font-size: 0.85rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.25rem;">
+                            <i class="fa-solid fa-house-crack" style="font-size: 1.5rem;"></i>แผ่นดินไหว
+                        </button>
+                        <button id="btn-fire" class="btn btn-danger btn-sm"
+                            style="margin-bottom: 0; padding: 0.5rem; font-size: 0.85rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.25rem;">
+                            <i class="fa-solid fa-fire" style="font-size: 1.5rem;"></i>ไฟป่า
+                        </button>
+                    </div>
                 </div>
 
                 <div class="control-group">
@@ -73,11 +85,24 @@
 
                 <div class="network-container">
 
-                    <!-- เอฟเฟกต์คลื่นน้ำใต้ Sensor -->
-                    <div class="ocean-container" id="ocean">
-                        <div class="wave wave1"></div>
-                        <div class="wave wave2"></div>
-                        <div class="wave wave3"></div>
+                    <!-- เอฟเฟกต์บรรยากาศ (Live Scene Visuals) -->
+                    <div class="live-cam" id="ocean">
+                        <div class="cam-label">LIVE: SENSOR AREA 01</div>
+                        <div class="scene-sky"></div>
+                        <div class="scene-fire">
+                            <i class="fa-solid fa-fire flame f1"></i>
+                            <i class="fa-solid fa-fire flame f2"></i>
+                            <i class="fa-solid fa-fire flame f3"></i>
+                        </div>
+                        <div class="scene-ground">
+                            <i class="fa-solid fa-tree tree t1"></i>
+                            <i class="fa-solid fa-house house"></i>
+                            <i class="fa-solid fa-tree tree t2"></i>
+                            <div class="crack"></div>
+                        </div>
+                        <div class="scene-water">
+                            <div class="tsunami-wave"></div>
+                        </div>
                     </div>
 
                     <!-- Layer 1: Sensor -->

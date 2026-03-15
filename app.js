@@ -1,6 +1,8 @@
 // DOM Elements
 const btnNormal = document.getElementById('btn-normal');
 const btnTsunami = document.getElementById('btn-tsunami');
+const btnEarthquake = document.getElementById('btn-earthquake');
+const btnFire = document.getElementById('btn-fire');
 const btnDestroy = document.getElementById('btn-destroy');
 const btnRepair = document.getElementById('btn-repair');
 const latencyVal = document.getElementById('latency-val');
@@ -271,10 +273,12 @@ btnNormal.addEventListener('click', () => {
     isDangerMode = false;
     btnNormal.classList.add('active');
     btnTsunami.classList.remove('active');
+    btnEarthquake.classList.remove('active');
+    btnFire.classList.remove('active');
 
     // Reset Visuals
     dangerOverlay.classList.remove('active');
-    oceanContainer.classList.remove('tsunami');
+    oceanContainer.className = 'live-cam'; // Reset all extra classes
     nodeSensor.classList.remove('danger');
     statusIndicator.parentElement.classList.remove('danger');
     statusText.textContent = "ระบบทำงานปกติ";
@@ -290,28 +294,48 @@ function triggerScreenShake() {
     }, 500);
 }
 
-btnTsunami.addEventListener('click', () => {
+function triggerDisaster(type, titleInfo, statusMsg) {
     isDangerMode = true;
-    btnTsunami.classList.add('active');
     btnNormal.classList.remove('active');
+    btnTsunami.classList.toggle('active', type === 'tsunami');
+    btnEarthquake.classList.toggle('active', type === 'earthquake');
+    btnFire.classList.toggle('active', type === 'fire');
 
     // Environment Effects!
     dangerOverlay.classList.add('active');
-    oceanContainer.classList.add('tsunami');
+    oceanContainer.className = `live-cam ${type}`;
     nodeSensor.classList.add('danger');
     statusIndicator.parentElement.classList.add('danger');
-    statusText.textContent = "วิกฤต: สึนามิกำลังก่อตัว!";
-    triggerScreenShake();
+    statusText.textContent = statusMsg;
 
-    addLog('🚨 ภัยพิบัติ: ตรวจพบสึนามิ! เซนเซอร์เปลี่ยนสถานะเป็น DANGER', 'danger');
+    if (type === 'earthquake') {
+        appContainer.classList.add('shake-hard');
+        setTimeout(() => appContainer.classList.remove('shake-hard'), 2000);
+    } else {
+        triggerScreenShake();
+    }
+
+    addLog(`🚨 ภัยพิบัติ: ${titleInfo}`, 'danger');
     addLog('QoS Priority ปรับเป็นสูงสุด (100) สัญญาณเตือนภัยลัดคิวข้อมูลทั้งหมด', 'warning');
 
     // Instantly spawn a danger packet
     packets.push(new Packet('danger'));
 
-    // Spawn a few normal packets right before to show "bypassing" visually in the queue
+    // Spawn normal packets to show bypassing visually in the queue
     packets.push(new Packet('normal'));
     packets.push(new Packet('normal'));
+}
+
+btnTsunami.addEventListener('click', () => {
+    triggerDisaster('tsunami', 'ตรวจพบสึนามิ! เซนเซอร์เปลี่ยนสถานะเป็น DANGER', 'วิกฤต: สึนามิกำลังก่อตัว!');
+});
+
+btnEarthquake.addEventListener('click', () => {
+    triggerDisaster('earthquake', 'แผ่นดินไหวรุนแรง! เซนเซอร์จับแรงสั่นสะเทือนได้', 'วิกฤต: แผ่นดินไหว 7.5 แมกนิจูด!');
+});
+
+btnFire.addEventListener('click', () => {
+    triggerDisaster('fire', 'ไฟป่าลุกลามอย่างรวดเร็ว! ตรวจจับความร้อนสูง', 'วิกฤต: ไฟป่าระดับรุนแรงบริเวณป่าไม้!');
 });
 
 btnDestroy.addEventListener('click', () => {

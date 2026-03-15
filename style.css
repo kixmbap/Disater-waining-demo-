@@ -259,64 +259,251 @@ body {
     overflow: hidden;
 }
 
-/* Ocean Wave Visuals */
-.ocean-container {
+.btn-sm {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.btn-sm i {
+    font-size: 1.5rem;
+}
+
+/* Environment Visuals (Sensor Area Camera - Beautiful Edition) */
+.live-cam {
     position: absolute;
-    bottom: -50px;
-    left: -50px;
-    width: 300px;
-    height: 300px;
-    z-index: 0;
-    border-radius: 50%;
+    bottom: 30px;
+    left: 30px;
+    width: 260px;
+    height: 160px;
+    background: linear-gradient(to bottom, #111b2b 0%, #080d16 100%);
+    border: 2px solid rgba(0, 255, 204, 0.4);
+    border-radius: 12px;
+    z-index: 10;
     overflow: hidden;
-    opacity: 0.7;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 255, 204, 0.2);
+    transition: all 0.5s ease;
+    backdrop-filter: blur(10px);
+}
+
+.cam-label {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: #ff3366;
+    font-size: 0.8rem;
+    font-weight: 800;
+    z-index: 10;
+    text-shadow: 0 0 8px rgba(255, 51, 102, 0.8);
+    animation: blink 1s infinite alternate;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.cam-label::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #ff3366;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #ff3366;
+}
+
+/* Base Elements */
+.scene-ground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    background: #1e3a24;
+    border-top: 3px solid #2d5a36;
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.tree,
+.house {
+    position: absolute;
+    bottom: 30px;
+    transition: all 0.5s ease;
+    z-index: 3;
+}
+
+.tree {
+    color: #2ecc71;
+    font-size: 28px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+.tree.t1 {
+    left: 30px;
+}
+
+.tree.t2 {
+    right: 30px;
+    font-size: 24px;
+}
+
+.house {
+    left: 95px;
+    color: #b1c0c1;
+    font-size: 26px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+.crack {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 6px;
+    height: 0;
+    background: #0a0a0a;
+    transform: translateX(-50%);
     transition: all 0.5s ease;
 }
 
-.ocean-container.tsunami {
-    --wave-color: rgba(255, 51, 102, 0.5);
-    /* สีแดง */
-    transform: scale(1.5) translateY(-30px);
-    opacity: 0.9;
-}
-
-.wave {
-    background: var(--wave-color);
+.scene-water {
     position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: rgba(52, 152, 219, 0.8);
+    transition: all 1s ease;
+    z-index: 4;
+}
+
+.tsunami-wave {
+    position: absolute;
+    top: -20px;
+    left: 0;
     width: 200%;
-    height: 200%;
-    top: 60%;
-    left: -50%;
-    border-radius: 40%;
-    animation: rotate 10s infinite linear;
-    transition: background 0.5s ease;
+    height: 40px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%233498db" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,170.7C672,171,768,117,864,122.7C960,128,1056,192,1152,213.3C1248,235,1344,213,1392,202.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') repeat-x;
+    background-size: 50% 100%;
+    opacity: 0;
+    transition: all 0.5s ease;
 }
 
-.ocean-container.tsunami .wave {
-    animation: rotate 3s infinite linear;
-    /* หมุนเร็วมากเวลามีสึนามิ */
+.scene-fire {
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 5;
 }
 
-.wave2 {
-    animation-duration: 15s;
-    opacity: 0.5;
-    top: 65%;
-    border-radius: 45%;
+.flame {
+    position: absolute;
+    bottom: 0;
+    color: #ff4500;
+    font-size: 40px;
+    animation: fireFlicker 0.3s infinite alternate;
+    filter: drop-shadow(0 0 10px #ff4500);
 }
 
-.ocean-container.tsunami .wave2 {
-    animation-duration: 4s;
+.flame.f1 {
+    left: 25px;
+    animation-delay: 0.1s;
 }
 
-.wave3 {
-    animation-duration: 20s;
-    opacity: 0.3;
-    top: 70%;
-    border-radius: 35%;
+.flame.f2 {
+    left: 110px;
+    font-size: 55px;
+    animation-delay: 0.3s;
+    color: #ff8c00;
 }
 
-.ocean-container.tsunami .wave3 {
-    animation-duration: 5s;
+.flame.f3 {
+    right: 25px;
+    animation-delay: 0.2s;
+}
+
+/* --- Disaster States --- */
+.live-cam.tsunami {
+    border-color: #ff3366;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 51, 102, 0.5);
+}
+
+.live-cam.tsunami .scene-water {
+    height: 130px;
+    background: rgba(0, 80, 160, 0.9);
+}
+
+.live-cam.tsunami .tsunami-wave {
+    opacity: 1;
+    animation: waveMove 2s infinite linear;
+}
+
+.live-cam.tsunami .tree,
+.live-cam.tsunami .house {
+    transform: rotate(70deg) translate(25px, 50px);
+    opacity: 0.1;
+}
+
+.live-cam.earthquake {
+    border-color: #ffb800;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 184, 0, 0.3);
+    animation: camShake 0.1s infinite;
+}
+
+.live-cam.earthquake .scene-ground {
+    background: #3a2b20;
+    border-top-color: #4a3729;
+}
+
+.live-cam.earthquake .crack {
+    height: 100%;
+    box-shadow: 0 0 20px #ff4500;
+    background: #ff4500;
+}
+
+.live-cam.earthquake .tree.t1 {
+    transform: rotate(-25deg) translateY(12px);
+}
+
+.live-cam.earthquake .tree.t2 {
+    transform: rotate(20deg) translateY(6px);
+}
+
+.live-cam.earthquake .house {
+    transform: translateY(18px) rotate(12deg);
+    color: #7f8c8d;
+}
+
+.live-cam.fire {
+    background: linear-gradient(to bottom, #4a1c1c 0%, #290f0f 100%);
+    border-color: #ff4500;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 69, 0, 0.4);
+}
+
+.live-cam.fire .scene-fire {
+    opacity: 1;
+}
+
+.live-cam.fire .tree {
+    color: #111;
+    filter: drop-shadow(0 0 5px #ff4500);
+}
+
+.live-cam.fire .house {
+    color: #222;
+}
+
+.live-cam.fire .scene-ground {
+    background: #2b2520;
+    border-top-color: #1a1511;
 }
 
 #packetCanvas {
@@ -711,5 +898,41 @@ body {
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes waveMove {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: -250px;
+    }
+}
+
+@keyframes camShake {
+    0% {
+        transform: translate(2px, 2px) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-2px, -3px) rotate(-1deg);
+    }
+
+    100% {
+        transform: translate(-2px, 2px) rotate(1deg);
+    }
+}
+
+@keyframes fireFlicker {
+    0% {
+        opacity: 0.8;
+        transform: scaleY(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleY(1.1);
     }
 }
