@@ -1,0 +1,842 @@
+[
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "กรุงเทพมหานคร",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "กรุงเทพมหานคร",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "กรุงเทพมหานคร",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "กรุงเทพมหานคร",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "กรุงเทพมหานคร",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "กรุงเทพมหานคร",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "นนทบุรี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "นนทบุรี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "นนทบุรี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "นนทบุรี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "นนทบุรี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "นนทบุรี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ปทุมธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ปทุมธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ปทุมธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ปทุมธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ปทุมธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ปทุมธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สมุทรปราการ",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สมุทรปราการ",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สมุทรปราการ",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สมุทรปราการ",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สมุทรปราการ",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สมุทรปราการ",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สมุทรสาคร",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สมุทรสาคร",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สมุทรสาคร",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สมุทรสาคร",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สมุทรสาคร",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สมุทรสาคร",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ชลบุรี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ชลบุรี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.03,
+    "location": "ชลบุรี",
+    "description": "ฝน 0.50 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ชลบุรี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ชลบุรี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ชลบุรี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ระยอง",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ระยอง",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ระยอง",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ระยอง",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ระยอง",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ระยอง",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "จันทบุรี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "จันทบุรี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "จันทบุรี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "จันทบุรี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "จันทบุรี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "จันทบุรี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ตราด",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ตราด",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ตราด",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ตราด",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ตราด",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ตราด",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "นครราชสีมา",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "นครราชสีมา",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "นครราชสีมา",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "นครราชสีมา",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "นครราชสีมา",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "นครราชสีมา",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "เชียงใหม่",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "เชียงใหม่",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "เชียงใหม่",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "เชียงใหม่",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "เชียงใหม่",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "เชียงใหม่",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "เชียงราย",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "เชียงราย",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "เชียงราย",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "เชียงราย",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "เชียงราย",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "เชียงราย",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ขอนแก่น",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ขอนแก่น",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ขอนแก่น",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ขอนแก่น",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ขอนแก่น",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ขอนแก่น",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "อุบลราชธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "อุบลราชธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "อุบลราชธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "อุบลราชธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "อุบลราชธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "อุบลราชธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สงขลา",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สงขลา",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สงขลา",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สงขลา",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สงขลา",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สงขลา",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ภูเก็ต",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ภูเก็ต",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ภูเก็ต",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ภูเก็ต",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ภูเก็ต",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "ภูเก็ต",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "นครศรีธรรมราช",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "นครศรีธรรมราช",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "นครศรีธรรมราช",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "นครศรีธรรมราช",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "นครศรีธรรมราช",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "นครศรีธรรมราช",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สุราษฎร์ธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สุราษฎร์ธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สุราษฎร์ธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สุราษฎร์ธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สุราษฎร์ธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "สุราษฎร์ธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "อุดรธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "อุดรธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "อุดรธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "อุดรธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "อุดรธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "อุดรธานี",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T00:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "พัทยา",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T01:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "พัทยา",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T02:00",
+    "event": "normal",
+    "severity": 0.01,
+    "location": "พัทยา",
+    "description": "ฝน 0.10 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T03:00",
+    "event": "normal",
+    "severity": 0.01,
+    "location": "พัทยา",
+    "description": "ฝน 0.10 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T04:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "พัทยา",
+    "description": "ฝน 0.00 มม./ชม."
+  },
+  {
+    "timestamp": "2026-03-18T05:00",
+    "event": "normal",
+    "severity": 0.0,
+    "location": "พัทยา",
+    "description": "ฝน 0.00 มม./ชม."
+  }
+]

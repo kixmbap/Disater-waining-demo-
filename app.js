@@ -35,6 +35,59 @@ let packetIdCounter = 0;
 let queueData = [];
 let spawnInterval;
 
+// Real data mode
+let realEvents = [];
+let realDataIndex = 0;
+let isRealDataMode = true; // set false to force demo only
+
+async function loadRealData() {
+    if (!isRealDataMode) {
+        addLog('Real data mode ปิดไว้, ใช้ demo เท่านั้น', 'warning');
+        return;
+    }
+
+    try {
+        const res = await fetch('data/real_data.json');
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+        const json = await res.json();
+        realEvents = Array.isArray(json) ? json : [];
+
+        if (realEvents.length > 0) {
+            addLog(`โหลดข้อมูลจริงจาก data/real_data.json สำเร็จ (${realEvents.length} บันทึก)`, 'success');
+        } else {
+            addLog('ไฟล์ real_data.json ว่างเปล่า, ใช้ mode demo', 'warning');
+        }
+    } catch (err) {
+        realEvents = [];
+        addLog(`โหลดข้อมูลจริงไม่สำเร็จ (${err}), ใช้ demo ต่อ`, 'warning');
+    }
+}
+
+function getPacketTypeFromEvent(eventObj) {
+    const severity = Number(eventObj.severity || 0);
+    if (severity >= 0.7) return 'danger';
+    if (eventObj.event === 'earthquake' || eventObj.event === 'tsunami' || eventObj.event === 'fire') return 'danger';
+    return 'normal';
+}
+
+function spawnFromRealData() {
+    if (realEvents.length === 0) return;
+
+    const event = realEvents[realDataIndex];
+    realDataIndex = (realDataIndex + 1) % realEvents.length;
+
+    const type = getPacketTypeFromEvent(event);
+    packets.push(new Packet(type));
+
+    addLog(`โหลดเหตุการณ์จริง ${event.event} (${event.location}) severity=${event.severity}`, type === 'danger' ? 'danger' : 'normal');
+
+    // Update UI mode flags
+    if (type === 'danger') {
+        triggerDisaster(event.event, `เตือนภัยจริง: ${event.description}`, `เหตุการณ์: ${event.event} ที่ ${event.location}`);
+    }
+}
+
 // Resize canvas to match container
 function resizeCanvas() {
     const container = canvas.parentElement;
@@ -382,12 +435,16 @@ btnRepair.addEventListener('click', () => {
 // Simulation spawner function
 function runSimulation() {
     spawnInterval = setInterval(() => {
-        // Only spawn normal traffic automatically if not in danger mode
-        // Or if in danger mode, occasionally spawn normal traffic to show bypassing
+        // ถ้ามีข้อมูลจริง ให้ใช้ฟีเจอร์ "real data" (Full workflow) โดย priority และภัยจากข้อมูลจริง
+        if (realEvents.length > 0) {
+            spawnFromRealData();
+            return;
+        }
+
+        // อยู่ใน demo mode แบบปกติ
         if (!isDangerMode) {
             packets.push(new Packet('normal'));
         } else {
-            // In danger mode, flood with danger packets
             if (Math.random() > 0.4) {
                 packets.push(new Packet('danger'));
             } else {
@@ -400,4 +457,4 @@ function runSimulation() {
 // Init
 addLog('อินเทอร์เฟซพร้อมใช้งาน เริ่มการจำลองเครือข่าย', 'success');
 requestAnimationFrame(animate);
-runSimulation();
+loadRealData().then(() => runSimulation());
