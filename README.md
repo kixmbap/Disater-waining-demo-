@@ -56,15 +56,24 @@ Since the application was entirely rewritten to be client-side only (Vanilla JS)
 1. สร้างไฟล์ `data/real_data.json` (ตัวอย่าง JSON อยู่ใน repo) หรือรัน Python script:
 
 ```bash
-pip install requests
+python -m pip install requests
 python python/fetch_real_data.py
 ```
 
-2. `app.js` จะพยายามโหลด `data/real_data.json` โดยอัตโนมัติ (หากเจอ) และใช้ข้อยุติเหตุการณ์จริงร่วมกับสภาวะจำลอง (QoS, latency, self-healing, BCI warning flow)
+2. รัน FastAPI server (realtime API):
 
-3. หากไม่พบไฟล์หรือโหลดล้มเหลว จะกลับมาต่อที่ Demo mode ของเดิม
+```bash
+python -m pip install fastapi uvicorn
+uvicorn python.realtime_server:app --reload --host 0.0.0.0 --port 8000
+```
 
-4. ปรับ `app.js` ที่ค่า `isRealDataMode` เป็น `false` หากต้องการทดสอบเดโมเท่านั้น
+3. `app.js` จะโหลดข้อมูลจาก API `/api/realtime` และ fallback ไป `data/real_data.json` ถ้า service ไม่พร้อม
+
+4. `app.js` มี polling ทุก 20 วินาที เพื่อดึงข้อมูลใหม่อย่างเรียลไทม์ (live refresh)
+
+5. หากไม่มี server หรือโหลดล้มเหลว จะกลับมาต่อที่ Demo mode ของเดิม
+
+6. ปรับ `app.js` ที่ค่า `isRealDataMode` เป็น `false` หากต้องการทดสอบเดโมเท่านั้น
 
 ## ตัวอย่างการเรียกใช้งาน (Workflow)
 
@@ -72,6 +81,29 @@ python python/fetch_real_data.py
 * Danger event จาก real_data.json จะถูกแทนที่เป็น DANGER packet (priority 100)
 * Normal event จะถูกส่งเป็น NORMAL packet (priority 10)
 * QoS queue ใช้คิวลำดับความสำคัญแบบเดียวกับโครงงาน
+
+## Verification Checklist (ตรวจสอบการทำงาน)
+
+1. ตรวจว่ามีไฟล์ข้อมูลล่าสุด
+   * `python python/fetch_real_data.py` (จะได้ `data/real_data.json`)
+   * สังเกต output `บันทึก 120 เรคอร์ดลง ...` (หรือจำนวนใกล้เคียง)
+2. รัน FastAPI service
+   * `python -m pip install fastapi uvicorn`
+   * `uvicorn python.realtime_server:app --reload --host 0.0.0.0 --port 8000`
+3. ตรวจ API ตรง
+   * เปิด http://localhost:8000/api/realtime
+   * ควรเห็น JSON response `{ "timestamp": ..., "count": ..., "events": [...] }`
+4. เปิดเว็บ UI
+   * http://localhost/Disater-waining-demo-/index.html
+   * ตรวจ log ว่า `โหลดข้อมูลจริงจาก API /api/realtime สำเร็จ` หรือ `fallback data/real_data.json`
+5. ถ้าไม่อยากเปิด terminal ตลอดให้ใช้ Windows service หรือ `run_realtime.bat`
+
+## การใช้งานหลังจากเซ็ตอัพเสร็จ
+
+* รันสคริปต์ทุกครั้งก่อนเริ่มการสาธิต
+  * `python python/fetch_real_data.py`
+* เช็คสถานะ network (Latency, QoS, Self-healing) ผ่าน UI
+* เก็บ screenshot log % scenario สำหรับรายงานงานอาจารย์
 
 <p align="center">
 <img src="imgdemo/demo.png" width="700">

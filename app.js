@@ -47,22 +47,44 @@ async function loadRealData() {
     }
 
     try {
-        const res = await fetch('data/real_data.json');
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const res = await fetch('/api/realtime');
+        // Fallback to local file if no server running
+        if (res.status === 404) {
+            throw new Error('API 404');
+        }
 
-        const json = await res.json();
-        realEvents = Array.isArray(json) ? json : [];
+        const payload = await res.json();
+        realEvents = Array.isArray(payload.events) ? payload.events : [];
 
         if (realEvents.length > 0) {
-            addLog(`โหลดข้อมูลจริงจาก data/real_data.json สำเร็จ (${realEvents.length} บันทึก)`, 'success');
+            addLog(`โหลดข้อมูลจริงจาก API /api/realtime สำเร็จ (${realEvents.length} บันทึก)`, 'success');
         } else {
-            addLog('ไฟล์ real_data.json ว่างเปล่า, ใช้ mode demo', 'warning');
+            addLog('API real-time ให้ข้อมูลว่าง อัพเดต demo data', 'warning');
+            realEvents = [];
         }
     } catch (err) {
-        realEvents = [];
-        addLog(`โหลดข้อมูลจริงไม่สำเร็จ (${err}), ใช้ demo ต่อ`, 'warning');
+        addLog(`API realtime ล้มเหลว (${err}). โหลดจาก data/real_data.json`, 'warning');
+        try {
+            const res2 = await fetch('data/real_data.json');
+            if (res2.ok) {
+                const json = await res2.json();
+                realEvents = Array.isArray(json) ? json : [];
+                addLog(`โหลดข้อมูลจริงจาก data/real_data.json สำเร็จ (${realEvents.length} บันทึก)`, 'success');
+            } else {
+                throw new Error(`HTTP ${res2.status}`);
+            }
+        } catch (err2) {
+            realEvents = [];
+            addLog(`ไม่สามารถโหลดข้อมูลสำรองได้ (${err2}), ใช้ demo ต่อ`, 'danger');
+        }
     }
 }
+
+// Poll realtime data every 20 seconds
+setInterval(() => {
+    if (isRealDataMode) loadRealData();
+}, 20000);
+
 
 function getPacketTypeFromEvent(eventObj) {
     const severity = Number(eventObj.severity || 0);

@@ -936,3 +936,177 @@ body {
         transform: scaleY(1.1);
     }
 }
+
+/* Responsive (Mobile-first) */
+@media (max-width: 1200px) {
+    .dashboard {
+        grid-template-columns: 280px 1fr;
+    }
+
+    .panel {
+        padding: 1rem;
+    }
+
+    .network-container {
+        padding: 1.5rem 0.8rem;
+    }
+
+    .live-cam {
+        width: 220px;
+        height: 140px;
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .queue-card {
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        overflow: auto;
+    }
+
+    .app-container {
+        padding: 0.6rem;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .panel {
+        margin-bottom: 0.9rem;
+        max-height: none;
+        min-height: 120px;
+        padding: 1rem;
+    }
+
+    .panel-header,
+    .control-group,
+    .metric-card,
+    .log-container,
+    .queue-card {
+        padding: 0.8rem;
+    }
+
+    .app-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+    }
+
+    .logo h1 {
+        font-size: 1.1rem;
+    }
+
+    .system-status {
+        font-size: 0.9rem;
+    }
+
+    .network-container {
+        flex-direction: column;
+        padding: 0.8rem;
+        min-height: 280px;
+    }
+
+    .node-column {
+        gap: 0.8rem;
+        min-width: 0;
+    }
+
+    .layer-title {
+        font-size: 0.75rem;
+        top: -18px;
+    }
+
+    .live-cam {
+        width: 140px;
+        height: 100px;
+        bottom: 10px;
+        left: 8px;
+    }
+
+    #packetCanvas {
+        display: none;
+    }
+
+    .metric-value {
+        font-size: 1.2rem;
+    }
+
+    .log-container {
+        max-height: 180px;
+    }
+
+    .queue-container {
+        min-height: 90px;
+    }
+
+    .btn {
+        font-size: 0.95rem;
+        padding: 0.65rem;
+    }
+
+    .control-group .desc,
+    .node span,
+    .metric-target,
+    .log-header {
+        font-size: 0.8rem;
+    }
+
+    .system-status,
+    .status-indicator {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .app-container {
+        padding: 0.4rem;
+    }
+
+    .logo h1 {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
+    .panel { padding: 0.8rem; }
+    .metric-value { font-size: 1rem; }
+    .panel-header h2 { font-size: 1rem; }
+    .network-container { min-height: 260px; }
+    .control-group .desc { font-size: 0.75rem; }
+    .queue-container { min-height: 80px; }
+    .image, .log-body { font-size: 0.76rem; }
+}
+
+
+@media (max-width: 600px) {
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.7rem;
+    }
+
+    .control-group .desc {
+        font-size: 0.8rem;
+    }
+
+    .panel-header h2 {
+        font-size: 1rem;
+    }
+
+    .live-cam {
+        width: 160px;
+        height: 100px;
+    }
+
+    .app-container {
+        padding: 0.6rem;
+    }
+
+    .dashboard {
+        gap: 0.6rem;
+    }
+}
