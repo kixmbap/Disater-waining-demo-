@@ -128,3 +128,4 @@ uvicorn python.realtime_server:app --reload --host 0.0.0.0 --port 8000
 
 - วิดีโอสาธิต: https://kku.world/vdonetwork
 - NotebookLM: https://notebooklm.google.com/notebook/dd78cf01-5c52-4ca6-b505-042d661a80ff?authuser=3&pageId=none
+- Demo: https://kixmbap.github.io/Disater-waining-demo-/
