@@ -1,57 +1,57 @@
-# Internet of Brains (BCI Disaster Network Simulator)
+# โครงการ Internet of Brains (ระบบจำลองเครือข่ายเตือนภัยพิบัติผ่าน BCI)
 
-Welcome to the **Internet of Brains** Interactive Simulation for Disaster Warning Networks!
+ยินดีต้อนรับสู่แบบจำลองเชิงโต้ตอบ **Internet of Brains** สำหรับเครือข่ายแจ้งเตือนภัยพิบัติ!
 
-This is a front-end web application (HTML, CSS, JavaScript) that demonstrates an advanced, state-of-the-art 4-layer disaster warning infrastructure. The focus of the project is on minimizing latency for critical alerts, prioritizing emergency data (QoS), and demonstrating network self-healing capabilities using a "Mycelium Edge AI" concept.
+โปรเจกต์นี้เป็นเว็บแอปพลิเคชันส่วนหน้า (HTML, CSS, JavaScript) ที่แสดงให้เห็นถึงโครงสร้างพื้นฐานการแจ้งเตือนภัยพิบัติ 4 ชั้น (4-layer) ที่ทันสมัยขั้นสูง จุดเน้นของโปรเจกต์คือการลดความหน่วง (Latency) สำหรับการแจ้งเตือนที่สำคัญ, การจัดลำดับความสำคัญของข้อมูลฉุกเฉิน (QoS), และการสาธิตความสามารถในการรักษาตัวเองของเครือข่าย (Self-healing) โดยใช้แนวคิด "Mycelium Edge AI"
 
-## Key Features
+## คุณสมบัติหลัก
 
-1. **Environmental Simulation (Live Camera)** 📸
-   Experience disaster states visually through the bottom-left Live Camera panel.
+1. **การจำลองสภาพแวดล้อม (กล้องดูภาพสด)**
+   สัมผัสสถานการณ์ภัยพิบัติด้วยภาพจำลองผ่านแผงกล้องดูภาพสดที่มุมซ้ายล่าง
    * **สภาวะปกติ (Normal State)**
-   * **สึนามิ (Tsunami):** Water level rises, waves crash, and the sensor dynamically changes to an Ocean Buoy (`เซนเซอร์ทุ่นทะเล`).
-   * **แผ่นดินไหว (Earthquake):** The screen violently shakes, ground cracks appear, and the sensor changes to a Seismic Sensor (`เซนเซอร์แผ่นดินไหว`).
-   * **ไฟป่า (Wildfire):** The environment burns, embers fly, and the sensor transforms into a Thermal Sensor (`เซนเซอร์ความร้อน`).
+   * **สึนามิ (Tsunami):** ระดับน้ำสูงขึ้น, คลื่นซัด, และเซนเซอร์จะเปลี่ยนเป็นทุ่นทะเล (Ocean Buoy) โดยอัตโนมัติ
+   * **แผ่นดินไหว (Earthquake):** หน้าจอจะสั่นสะเทือนอย่างรุนแรง, เกิดรอยแยกบนพื้น, และเซนเซอร์จะเปลี่ยนเป็นเซนเซอร์แผ่นดินไหว (Seismic Sensor)
+   * **ไฟป่า (Wildfire):** สภาพแวดล้อมเกิดเพลิงไหม้, มีประกายไฟปลิว, และเซนเซอร์จะเปลี่ยนเป็นเซนเซอร์ความร้อน (Thermal Sensor)
 
-2. **Network Flow Visualization & QoS Prioritization** 💨
-   Watch data packets actively traversing the 4 architectural layers:
-   * **ปกติ (Normal Packets - Green):** Move at standard speeds with artificial jitter.
-   * **วิกฤต (Danger Packets - Red):** Bypass the queue via "Neuron-Stream" and travel 3x faster, highlighting high-priority Quality of Service (QoS) implementation.
-   
-3. **Mycelium Self-Healing Network** 
-   * Click **"ทำลายเสาสัญญาณหลัก" (Destroy Edge Node)** to simulate a structural network failure.
-   * The system immediately reroutes danger packets and normal packets through alternate mini-nodes, ensuring zero data loss and maintaining active connections.
+2. **การแสดงผลการไหลของเครือข่ายและการจัดลำดับความสำคัญ (QoS)**
+   เฝ้าดูแพ็กเก็ตข้อมูลที่กำลังเคลื่อนที่ผ่านสถาปัตยกรรมทั้ง 4 ชั้นอย่างต่อเนื่อง:
+   * **ปกติ (แพ็กเก็ตทั่วไป - สีเขียว):** เคลื่อนที่ด้วยความเร็วมาตรฐานพร้อมกับความหน่วงเทียม (Artificial jitter)
+   * **วิกฤต (แพ็กเก็ตอันตราย - สีแดง):** ข้ามคิวผ่าน "Neuron-Stream" และเดินทางเร็วขึ้น 3 เท่า ซึ่งแสดงให้เห็นถึงการจัดลำดับความสำคัญคุณภาพการให้บริการ (QoS) ในระดับสูง
 
-4. **Real-time Metrics Dashboard** 📊
-   * **Latency Tracker**: Showcases the speed of Neuron-Stream bypasses (< 0.5s) compared to normal TCP/IP delivery (1-2s).
-   * **QoS Queue**: See standard background traffic queueing while emergency signals jump the line.
-   * **System Logs**: Follow along with plain-language backend tracking messages describing the current state.
+3. **เครือข่ายที่สามารถซ่อมแซมตัวเองได้ (Mycelium Self-Healing Network)**
+   * คลิก **"ทำลายเสาสัญญาณหลัก"** เพื่อจำลองความล้มเหลวของโครงสร้างเครือข่าย
+   * ระบบจะกำหนดเส้นทางใหม่สำหรับแพ็กเก็ตวิกฤตและแพ็กเก็ตปกติทันทีผ่านโหนดสำรองขนาดเล็ก เพื่อรับประกันว่าข้อมูลจะไม่สูญหายและยังคงรักษาการเชื่อมต่อไว้ได้
 
-## How to Run
+4. **แดชบอร์ดวัดผลแบบเรียลไทม์**
+   * **ตัวติดตามความหน่วง (Latency Tracker)**: แสดงให้เห็นถึงความเร็วในการผ่าน Neuron-Stream (< 0.5 วินาที) เมื่อเปรียบเทียบกับการจัดส่งผ่าน TCP/IP แบบปกติ (1-2 วินาที)
+   * **คิว QoS (QoS Queue)**: ดูการรอคิวของการส่งข้อมูลเบื้องหลังมาตรฐานในขณะที่สัญญาณฉุกเฉินสามารถลัดคิวได้
+   * **บันทึกระบบ (System Logs)**: ติดตามข้อความการทำงานของระบบเบื้องหลังด้วยภาษาที่เข้าใจง่ายเพื่ออธิบายสถานะปัจจุบัน
 
-Since the application was entirely rewritten to be client-side only (Vanilla JS), there is *no server installation required*.
+## วิธีการใช้งาน
 
-1. Double-click `index.html` to open it in any modern web browser.
-2. The simulation will begin immediately.
-3. Use the **Control Center (Left Panel)** to trigger different events and explain your architecture dynamically.
+เนื่องจากแอปพลิเคชันนี้ถูกเขียนขึ้นใหม่ทั้งหมดให้ทำงานบนฝั่งไคลเอนต์เท่านั้น (Vanilla JS) จึง *ไม่จำเป็นต้องติดตั้งเซิร์ฟเวอร์*
 
-## System Architecture Layers Demonstrated
+1. ดับเบิลคลิกไฟล์ `index.html` เพื่อเปิดในเว็บเบราว์เซอร์ยุคใหม่
+2. การจำลองจะเริ่มต้นขึ้นทันที
+3. ใช้ **ศูนย์ควบคุม (แผงควบคุมด้านซ้าย)** เพื่อกระตุ้นเหตุการณ์ต่างๆ และอธิบายสถาปัตยกรรมของคุณแบบโต้ตอบ
 
-1. **Layer 1: เซนเซอร์จับคลื่นวิกฤต (Sensors):** Edge devices collecting environmental anomaly data. Includes dynamic icon swapping based on the active disaster.
-2. **Layer 2: Mycelium Edge AI:** Intermediate routing nodes capable of autonomous self-healing and rapid packet prioritization.
-3. **Layer 3: โครงข่ายควอนตัม (Quantum Backbone):** The long-range core, efficiently handling massive throughput across continents.
-4. **Layer 4: ระบบประสาทผู้รับ (Brain / Receiver):** The final BCI (Brain-Computer Interface) terminal that bypasses language barriers directly delivering alerts.
+## สถาปัตยกรรมระบบทั้ง 4 ชั้นที่นำเสนอ
 
-## Technology Stack
-* **HTML5**: Semantic web structure.
-* **Vanilla JavaScript (ES6)**: Canvas animations (packet rendering), state management, DOM manipulation, queue/latency math.
-* **Modern CSS3**: Dynamic CSS variables, smooth UI transitions, glassmorphism hints, and custom CSS Keyframe animations for the disaster effects.
-* **FontAwesome 6**: Extensive library for the minimal, highly-contextual UI icons.
-* **Google Fonts**: `Kanit` & `Orbitron` to give it a clean, readable, yet slightly futuristic feel.
+1. **Layer 1: เซนเซอร์จับคลื่นวิกฤต (Sensors):** อุปกรณ์ปลายทาง (Edge devices) ทำหน้าที่รวบรวมข้อมูลความผิดปกติของสภาพแวดล้อม รวมถึงการเปลี่ยนไอคอนแบบไดนามิกตามภัยพิบัติที่เกิดขึ้น
+2. **Layer 2: Mycelium Edge AI:** โหนดตัวกลางสำหรับกำหนดเส้นทาง ซึ่งสามารถซ่อมแซมตัวเองได้โดยอัตโนมัติและจัดลำดับความสำคัญของแพ็กเก็ตอย่างรวดเร็ว
+3. **Layer 3: โครงข่ายควอนตัม (Quantum Backbone):** โครงข่ายหลักระยะไกล ซึ่งรองรับปริมาณข้อมูลมหาศาลข้ามทวีปได้อย่างมีประสิทธิภาพ
+4. **Layer 4: ระบบประสาทผู้รับ (Brain / Receiver):** สถานีเชื่อมต่อสมองกับคอมพิวเตอร์ (BCI) ปลายทางที่ก้าวข้ามกำแพงด้านภาษาและส่งมอบการแจ้งเตือนโดยตรง
 
-## Real Data Integration
+## เทคโนโลยีที่ใช้
+* **HTML5**: โครงสร้างแบบ Semantic web
+* **Vanilla JavaScript (ES6)**: แอนิเมชันบน Canvas (การเรนเดอร์แพ็กเก็ต), การจัดการสถานะ, การจัดการ DOM, การคำนวณคิวและความหน่วง
+* **Modern CSS3**: ตัวแปร CSS แบบไดนามิก, การเปลี่ยนผ่าน UI ที่ลื่นไหล, สไตล์ Glassmorphism, และการใช้ Keyframe animations เพื่อสร้างเอฟเฟกต์ภัยพิบัติ
+* **FontAwesome 6**: ไลบรารีอเนกประสงค์สำหรับไอคอน UI ที่ดูเรียบง่ายและสื่อความหมายได้ดี
+* **Google Fonts**: ใช้ฟอนต์ `Kanit` และ `Orbitron` เพื่อให้ดูสะอาดตา อ่านง่าย แต่ยังคงความรู้สึกล้ำยุคเล็กน้อย
 
-เพิ่มโหมด “real-data” เพื่อให้โปรเจคไม่ใช่แค่เดโม:
+## การเชื่อมต่อข้อมูลจริง (Real Data Integration)
+
+เพิ่มโหมด "real-data" เพื่อให้โปรเจกต์ไม่ใช่แค่ระบบทดสอบ:
 
 1. สร้างไฟล์ `data/real_data.json` (ตัวอย่าง JSON อยู่ใน repo) หรือรัน Python script:
 
@@ -67,43 +67,43 @@ python -m pip install fastapi uvicorn
 uvicorn python.realtime_server:app --reload --host 0.0.0.0 --port 8000
 ```
 
-3. `app.js` จะโหลดข้อมูลจาก API `/api/realtime` และ fallback ไป `data/real_data.json` ถ้า service ไม่พร้อม
+3. `app.js` จะโหลดข้อมูลจาก API `/api/realtime` และสลับไปใช้ `data/real_data.json` (fallback) ถ้า service ไม่พร้อม
 
-4. `app.js` มี polling ทุก 20 วินาที เพื่อดึงข้อมูลใหม่อย่างเรียลไทม์ (live refresh)
+4. `app.js` มีการตรวจจับ (polling) ทุก 20 วินาที เพื่อดึงข้อมูลใหม่อย่างเรียลไทม์ (live refresh)
 
-5. หากไม่มี server หรือโหลดล้มเหลว จะกลับมาต่อที่ Demo mode ของเดิม
+5. หากไม่มีเซิร์ฟเวอร์หรือโหลดล้มเหลว จะกลับมาทำงานที่โหมดทดสอบ (Demo mode) ตามเดิม
 
-6. ปรับ `app.js` ที่ค่า `isRealDataMode` เป็น `false` หากต้องการทดสอบเดโมเท่านั้น
+6. ปรับค่าใน `app.js` ที่ตัวแปร `isRealDataMode` เป็น `false` หากต้องการทดสอบเฉพาะระบบจำลองเท่านั้น
 
 ## ตัวอย่างการเรียกใช้งาน (Workflow)
 
 * Sensor -> Edge -> Backbone -> Brain
-* Danger event จาก real_data.json จะถูกแทนที่เป็น DANGER packet (priority 100)
-* Normal event จะถูกส่งเป็น NORMAL packet (priority 10)
-* QoS queue ใช้คิวลำดับความสำคัญแบบเดียวกับโครงงาน
+* ภัยพิบัติ (Danger event) จาก real_data.json จะถูกแทนที่เป็นแพ็กเก็ต DANGER (ความสำคัญระดับ 100)
+* เหตุการณ์อัปเดตปกติ (Normal event) จะถูกส่งเป็นแพ็กเก็ต NORMAL (ความสำคัญระดับ 10)
+* คิว QoS ใช้คิวลำดับความสำคัญแบบเดียวกับโครงงาน
 
-## Verification Checklist (ตรวจสอบการทำงาน)
+## รายการตรวจสอบการทำงาน (Verification Checklist)
 
-1. ตรวจว่ามีไฟล์ข้อมูลล่าสุด
-   * `python python/fetch_real_data.py` (จะได้ `data/real_data.json`)
-   * สังเกต output `บันทึก 120 เรคอร์ดลง ...` (หรือจำนวนใกล้เคียง)
-2. รัน FastAPI service
-   * `python -m pip install fastapi uvicorn`
-   * `uvicorn python.realtime_server:app --reload --host 0.0.0.0 --port 8000`
-3. ตรวจ API ตรง
-   * เปิด http://localhost:8000/api/realtime
-   * ควรเห็น JSON response `{ "timestamp": ..., "count": ..., "events": [...] }`
+1. ตรวจสอบว่ามีไฟล์ข้อมูลล่าสุด
+   * รันคำสั่ง `python python/fetch_real_data.py` (จะได้ไฟล์ `data/real_data.json`)
+   * สังเกตผลลัพธ์ว่ามีข้อความ `บันทึก 120 เรคอร์ดลง ...` (หรือจำนวนใกล้เคียง)
+2. รันบริการ FastAPI
+   * รันคำสั่ง `python -m pip install fastapi uvicorn`
+   * รันคำสั่ง `uvicorn python.realtime_server:app --reload --host 0.0.0.0 --port 8000`
+3. ตรวจสอบ API โดยตรง
+   * เปิดลิงก์ http://localhost:8000/api/realtime
+   * ควรเห็นการตอบกลับเป็น JSON รูปแบบ `{ "timestamp": ..., "count": ..., "events": [...] }`
 4. เปิดเว็บ UI
-   * http://localhost/Disater-waining-demo-/index.html
-   * ตรวจ log ว่า `โหลดข้อมูลจริงจาก API /api/realtime สำเร็จ` หรือ `fallback data/real_data.json`
-5. ถ้าไม่อยากเปิด terminal ตลอดให้ใช้ Windows service หรือ `run_realtime.bat`
+   * เข้าเว็บเบราว์เซอร์ไปที่ http://localhost/Disater-waining-demo-/index.html
+   * ตรวจสอบบันทึกการทำงาน (log) ในเบราว์เซอร์ว่าแสดงข้อความ `โหลดข้อมูลจริงจาก API /api/realtime สำเร็จ` หรือ `fallback data/real_data.json`
+5. ถ้าไม่ต้องการเปิดหน้าต่าง terminal ทิ้งไว้ตลอดเวลา สามารถตั้งค่าเป็น Windows service หรือใช้สคริปต์ `run_realtime.bat`
 
-## การใช้งานหลังจากเซ็ตอัพเสร็จ
+## การใช้งานหลังจากตั้งค่าเสร็จสิ้น
 
 * รันสคริปต์ทุกครั้งก่อนเริ่มการสาธิต
-  * `python python/fetch_real_data.py`
-* เช็คสถานะ network (Latency, QoS, Self-healing) ผ่าน UI
-* เก็บ screenshot log % scenario สำหรับรายงานงานอาจารย์
+  * รันคำสั่ง `python python/fetch_real_data.py`
+* ตรวจสอบสถานะเครือข่าย (ความหน่วง, QoS, การซ่อมแซมตัวเอง) ผ่านหน้า UI
+* เก็บภาพหน้าจอสถานะและรูปแบบการไหลของเครือข่าย เพื่อนำไปใช้สำหรับรายงานส่งอาจารย์
 
 <p align="center">
 <img src="imgdemo/demo.png" width="700">
@@ -111,6 +111,5 @@ uvicorn python.realtime_server:app --reload --host 0.0.0.0 --port 8000
 
 ## ลิงก์อ้างอิง
 
-- วีดีโอสาธิต: https://kku.world/vdonetwork
+- วิดีโอสาธิต: https://kku.world/vdonetwork
 - NotebookLM: https://notebooklm.google.com/notebook/dd78cf01-5c52-4ca6-b505-042d661a80ff?authuser=3&pageId=none
-
