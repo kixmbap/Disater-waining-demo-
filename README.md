@@ -108,3 +108,9 @@ uvicorn python.realtime_server:app --reload --host 0.0.0.0 --port 8000
 <p align="center">
 <img src="imgdemo/demo.png" width="700">
 </p>
+
+## ลิงก์อ้างอิง
+
+- วีดีโอสาธิต: https://kku.world/vdonetwork
+- NotebookLM: https://notebooklm.google.com/notebook/dd78cf01-5c52-4ca6-b505-042d661a80ff?authuser=3&pageId=none
+
