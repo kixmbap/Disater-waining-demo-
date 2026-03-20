@@ -16,22 +16,17 @@
 
 ---
 
-## ผู้จัดทำ (สมาชิกในกลุ่ม)
+## 👥 ผู้จัดทำ (Team Members)
 
-| รหัสนักศึกษา | ชื่อ-นามสกุล | Section |
-|--------------|-------------|--------|
+| Profile | รหัสนักศึกษา | ชื่อ-นามสกุล | Section |
+| :---: | :---: | :--- | :---: |
+| <a href="https://github.com/Catsack423"><img src="https://github.com/Catsack423.png" width="50px" style="border-radius:50%;" alt="ปิยะพล"></a> | 673380280-2 | นายปิยะพล ตุ่นป่า | 1 |
+| <img src="https://ui-avatars.com/api/?name=Peerapat&background=random" width="50px" style="border-radius:50%;" alt="พีรพัฒน์"> | 673380053-3 | นายพีรพัฒน์ ป้องกันยา | 1 |
+| <img src="https://ui-avatars.com/api/?name=Thananchai&background=random" width="50px" style="border-radius:50%;" alt="ธนันชัย"> | 673380042-8 | นายธนันชัย พันธราช | 1 |
+| <img src="https://ui-avatars.com/api/?name=Nattapong&background=random" width="50px" style="border-radius:50%;" alt="ณัฐพงศ์"> | 673380038-9 | นายณัฐพงศ์ กรธนกิจ | 1 |
+| <img src="https://ui-avatars.com/api/?name=Pawat&background=random" width="50px" style="border-radius:50%;" alt="ปวัฒน์"> | 673380048-6 | นายปวัฒน์ ปัดทุมมา | 2 |
 
-<p align="left">
-  <a href="https://github.com/Catsack423">
-    <img src="https://github.com/Catsack423.png" width="50px" style="border-radius:50%;" alt="Friend's Name">
-  </a>
-  &nbsp;
-  <b>| 673380280-2 | นายปิยะพล ตุ่นป่า | Sec 1 |</b> 
-</p>
-| 673380053-3 | นายพีรพัฒน์ ป้องกันยา | Sec 1 |
-| 673380042-8 | นายธนันชัย พันธราช | Sec 1 |
-| 673380038-9 | นายณัฐพงศ์ กรธนกิจ | Sec 1 |
-| 673380048-6 | นายปวัฒน์ ปัดทุมมา | Sec 2 |
+
 
 ---
 
