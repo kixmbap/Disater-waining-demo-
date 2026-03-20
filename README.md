@@ -4,12 +4,12 @@
 
 
 
-# Veido
+# Video
 [![Watch the video](https://img.shields.io/badge/Play_Video-Google_Drive-red?style=for-the-badge&logo=googledrive)](https://drive.google.com/file/d/1Pb0jY3mOsmPHOXC-m7U4Um1-tlbQMbBG/view)
 
 <p align="center">
   <a href="https://drive.google.com/file/d/1Pb0jY3mOsmPHOXC-m7U4Um1-tlbQMbBG/view">
-    <img src="alnalysis/video_thumbnail.png" width="600px" alt="Click to Watch">
+    <img src="imgdemo/สกรีนช็อต 2026-03-21 002549.png" width="600px" alt="Click to Watch">
     <br>
   </a>
 </p>
