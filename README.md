@@ -21,10 +21,10 @@
 | Profile | รหัสนักศึกษา | ชื่อ-นามสกุล | Section |
 | :---: | :---: | :--- | :---: |
 | <a href="https://github.com/Catsack423"><img src="https://github.com/Catsack423.png" width="50px" style="border-radius:50%;" alt="ปิยะพล"></a> | 673380280-2 | นายปิยะพล ตุ่นป่า | 1 |
-| <img src="https://ui-avatars.com/api/?name=Peerapat&background=random" width="50px" style="border-radius:50%;" alt="พีรพัฒน์"> | 673380053-3 | นายพีรพัฒน์ ป้องกันยา | 1 |
-| <img src="https://ui-avatars.com/api/?name=Thananchai&background=random" width="50px" style="border-radius:50%;" alt="ธนันชัย"> | 673380042-8 | นายธนันชัย พันธราช | 1 |
-| <img src="https://ui-avatars.com/api/?name=Nattapong&background=random" width="50px" style="border-radius:50%;" alt="ณัฐพงศ์"> | 673380038-9 | นายณัฐพงศ์ กรธนกิจ | 1 |
-| <img src="https://ui-avatars.com/api/?name=Pawat&background=random" width="50px" style="border-radius:50%;" alt="ปวัฒน์"> | 673380048-6 | นายปวัฒน์ ปัดทุมมา | 2 |
+| <a href="https://github.com/SandKingTH"><img src="https://github.com/SandKingTH.png" width="50px" style="border-radius:50%;" alt="พีรพัฒน์"></a>  | 673380053-3 | นายพีรพัฒน์ ป้องกันยา | 1 |
+| <a href="https://github.com/NongpandarX"><img src="https://github.com/NongpandarX.png" width="50px" style="border-radius:50%;" alt="ธนันชัย "></a> | 673380042-8 | นายธนันชัย พันธราช | 1 |
+| <a href="https://github.com/nattapong-61"><img src="https://github.com/nattapong-61.png" width="50px" style="border-radius:50%;" alt="ณัฐพงศ์"></a> | 673380038-9 | นายณัฐพงศ์ กรธนกิจ | 1 |
+|<a href="https://github.com/kixmbap"><img src="https://github.com/kixmbap.png" width="50px" style="border-radius:50%;" alt="ปิยะพล"></a>  | 673380048-6 | นายปวัฒน์ ปัดทุมมา | 2 |
 
 
 
