@@ -2,20 +2,10 @@
 ทำให้ระบบดึงข้อมูล api ข้อมูลภัยพิบัติจริงจากหน่วยงานรัฐของประเทศไทย แบบreal time
 
 
+## โครงการ Internet of Brains (ระบบจำลองเครือข่ายเตือนภัยพิบัติผ่านมอง)
 
-
-# Video
-[![Watch the video](https://img.shields.io/badge/Play_Video-Google_Drive-red?style=for-the-badge&logo=googledrive)](https://drive.google.com/file/d/1Pb0jY3mOsmPHOXC-m7U4Um1-tlbQMbBG/view)
-
-<p align="center">
-  <a href="https://drive.google.com/file/d/1Pb0jY3mOsmPHOXC-m7U4Um1-tlbQMbBG/view">
-    <img src="imgdemo/สกรีนช็อต 2026-03-21 002549.png" width="600px" alt="Click to Watch">
-    <br>
-  </a>
-</p>
-
-# โครงการ Internet of Brains (ระบบจำลองเครือข่ายเตือนภัยพิบัติผ่านมอง)
-โปรเจคสำหรับรายวิชา **Computer Networks (CP352005)**  
+โปรเจคสำหรับรายวิชา 
+**Computer Networks (CP352005)**  
 กลุ่มที่ 11  
 
 ---
@@ -24,11 +14,11 @@
 
 | Profile | รหัสนักศึกษา | ชื่อ-นามสกุล | Section |
 | :---: | :---: | :--- | :---: |
-| <a href="https://github.com/Catsack423"><img src="https://github.com/Catsack423.png" width="50px" style="border-radius:50%;" alt="ปิยะพล"></a> | 673380280-2 | นายปิยะพล ตุ่นป่า | 1 |
-| <a href="https://github.com/SandKingTH"><img src="https://github.com/SandKingTH.png" width="50px" style="border-radius:50%;" alt="พีรพัฒน์"></a>  | 673380053-3 | นายพีรพัฒน์ ป้องกันยา | 1 |
-| <a href="https://github.com/NongpandarX"><img src="https://github.com/NongpandarX.png" width="50px" style="border-radius:50%;" alt="ธนันชัย "></a> | 673380042-8 | นายธนันชัย พันธราช | 1 |
-| <a href="https://github.com/nattapong-61"><img src="https://github.com/nattapong-61.png" width="50px" style="border-radius:50%;" alt="ณัฐพงศ์"></a> | 673380038-9 | นายณัฐพงศ์ กรธนกิจ | 1 |
-|<a href="https://github.com/kixmbap"><img src="https://github.com/kixmbap.png" width="50px" style="border-radius:50%;" alt="ปิยะพล"></a>  | 673380048-6 | นายปวัฒน์ ปัดทุมมา | 2 |
+| <a href="https://github.com/Catsack423"><img src="https://github.com/Catsack423.png" width="20px" style="border-radius:50%;" alt="ปิยะพล"></a> | 673380280-2 | นายปิยะพล ตุ่นป่า | 1 |
+| <a href="https://github.com/SandKingTH"><img src="https://github.com/SandKingTH.png" width="20px" style="border-radius:50%;" alt="พีรพัฒน์"></a>  | 673380053-3 | นายพีรพัฒน์ ป้องกันยา | 1 |
+| <a href="https://github.com/NongpandarX"><img src="https://github.com/NongpandarX.png" width="20px" style="border-radius:50%;" alt="ธนันชัย "></a> | 673380042-8 | นายธนันชัย พันธราช | 1 |
+| <a href="https://github.com/nattapong-61"><img src="https://github.com/nattapong-61.png" width="20px" style="border-radius:50%;" alt="ณัฐพงศ์"></a> | 673380038-9 | นายณัฐพงศ์ กรธนกิจ | 1 |
+|<a href="https://github.com/kixmbap"><img src="https://github.com/kixmbap.png" width="20px" style="border-radius:50%;" alt="ปิยะพล"></a>  | 673380048-6 | นายปวัฒน์ ปัดทุมมา | 2 |
 
 
 
