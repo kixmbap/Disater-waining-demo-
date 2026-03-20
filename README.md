@@ -23,7 +23,7 @@
 
 <p align="left">
   <a href="https://github.com/Catsack423">
-    <img src="https://github.com/Catsack423" width="50px" style="border-radius:50%;" alt="Friend's Name">
+    <img src="https://github.com/Catsack423.png" width="50px" style="border-radius:50%;" alt="Friend's Name">
   </a>
   &nbsp;
   <b>| 673380280-2 | นายปิยะพล ตุ่นป่า | Sec 1 |</b> 
